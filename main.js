@@ -1,8 +1,9 @@
 const grid = document.getElementById('grid');
+const colorChoice = document.getElementById('colorChoice');
 let size = document.getElementById('sizeSlider');
 
 function changeColor() {
-    this.style.backgroundColor = "orange";
+    this.style.backgroundColor = colorChoice.value;
 }
 
 function buildGrid(size) {
