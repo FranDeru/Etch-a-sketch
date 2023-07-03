@@ -1,5 +1,5 @@
 const grid = document.getElementById('grid');
-let size = 16;
+let size = document.getElementById('sizeSlider');
 
 function changeColor() {
     this.style.backgroundColor = "orange";
@@ -15,8 +15,16 @@ function buildGrid(size) {
         grid.appendChild(cell);
     }
 
-    let gridPixels = document.querySelectorAll('div');
+    let gridPixels = document.querySelectorAll('div.cell');
     gridPixels.forEach(gridPixel => gridPixel.addEventListener("mouseover", changeColor));
 }
 
-buildGrid(size);
+function pixelSize() {
+    let gridPixels = document.querySelectorAll('div.cell');
+    gridPixels.forEach(gridPixel => gridPixel.remove());
+    buildGrid(size.value);
+}
+
+buildGrid(45);
+
+size.addEventListener("mouseup", pixelSize);
