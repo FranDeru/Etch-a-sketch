@@ -18,18 +18,14 @@ body{
 }
 
 #grid{
+    display: grid;
     width: 600px;
     height: 600px;
     border: 2px solid black;
-    background: pink;
-    display: flex;
+    background: white;
 }
 
 .cell{
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.coloredCell{
-    background-color: black;
+    background: white;
+    border: none
 }
